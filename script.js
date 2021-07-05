@@ -31,6 +31,7 @@ const init = function () {
     score0El.textContent = '0';
     score1El.textContent = '0';
     diceEl.classList.add('hidden');
+    document.querySelector(`.player--${activePlayer}`).classList.remove('player--winner');
     playing = true;
 }
 init();
@@ -73,7 +74,7 @@ btnHold.addEventListener('click', function () {
         document.querySelector(`.player--${activePlayer}`).classList.add('player--winner');
         diceEl.classList.add('hidden');
         playing = false;
-        diceEl.classList.add('hidden');
+        
     }else{
         switchPlayer();
     }
