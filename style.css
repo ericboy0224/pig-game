@@ -20,6 +20,7 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
+  position: relative;
 }
 
 /* LAYOUT */
@@ -34,6 +35,7 @@ main {
   border-radius: 9px;
   overflow: hidden;
   display: flex;
+  z-index: 1;
 }
 
 .player {
@@ -166,6 +168,45 @@ main {
   color: #c7365f;
 }
 
-.hidden{
+.hidden {
   display: none;
+}
+
+.overlay {
+  background-color: rgba(0, 0, 0, 0.6);
+  filter: blur(1px);
+  height: 100vh;
+  width: 100%;
+  position: absolute;
+  z-index: 50;
+  top: 0;
+  left: 0;
+}
+
+.description-box {
+  position: absolute;
+  z-index: 100;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: rgba(235, 227, 227, 0.3);
+  font-size: 1.8rem;
+  height: 30rem;
+  width: 50rem;
+  border-radius: 50px;
+  flex-direction: column;
+  align-items: center;
+  padding: 3rem;
+  color: #fff;
+  text-align: center;
+}
+
+.heading {
+  margin-bottom: 2rem;
+  display: block;
+}
+
+.btn--ok{
+  position: absolute;
+  bottom: 1rem;
 }

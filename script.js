@@ -4,6 +4,9 @@
 const btnRoll = document.querySelector('.btn--roll');
 const btnHold = document.querySelector('.btn--hold');
 const btnNew = document.querySelector('.btn--new');
+const btnOk = document.querySelector('.btn--ok');
+const overlay =document.querySelector('.overlay');
+const desc = document.querySelector('.description-box')
 
 const diceEl = document.querySelector('.dice');
 
@@ -85,3 +88,8 @@ btnHold.addEventListener('click', function () {
 });
 
 btnNew.addEventListener('click', init);
+
+btnOk.addEventListener('click',function(){
+    desc.classList.add('hidden');
+    overlay.classList.add('hidden');
+})
